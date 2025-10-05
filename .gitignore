@@ -1,5 +1,3 @@
-simple_start_bounded_mode_checker/simple_formal/
-simple_start_bounded_mode_checker/simple_formal_bmc/
+simple_start_bounded_mode_checker/*/
 
-simple_start_cover/simple_formal_cover/
-simple_start_cover/simple_formal_cover/
+simple_start_cover_example/*/

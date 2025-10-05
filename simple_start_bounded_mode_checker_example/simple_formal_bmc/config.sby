@@ -1,8 +1,5 @@
-[tasks]
-bmc
-
 [options]
-bmc: mode bmc
+mode bmc
 depth 10
 
 [engines]

@@ -1,0 +1,96 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.55 (git sha1 60f126cd00c94892782470192d6c9f7abebe7c05, g++ 14.3.0 -fPIC -O3)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `simple_formal'. Setting top module to simple_formal.
+
+2.1. Analyzing design hierarchy..
+Top module:  \simple_formal
+Used module:     \simple
+
+2.2. Analyzing design hierarchy..
+Top module:  \simple_formal
+Used module:     \simple
+Removed 0 unused modules.
+Module simple_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== simple_formal ===
+
+   Number of wires:                  5
+   Number of wire bits:            257
+   Number of public wires:           3
+   Number of public wire bits:     192
+   Number of ports:                  3
+   Number of port bits:            192
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     $assert                         1
+     $eq                             1
+     $sub                            1
+     simple                          1
+
+=== simple ===
+
+   Number of wires:                  5
+   Number of wire bits:            320
+   Number of public wires:           3
+   Number of public wire bits:     192
+   Number of ports:                  3
+   Number of port bits:            192
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  3
+     $add                            2
+     $not                            1
+
+=== design hierarchy ===
+
+   simple_formal                     1
+     simple                          1
+
+   Number of wires:                 10
+   Number of wire bits:            577
+   Number of public wires:           6
+   Number of public wire bits:     384
+   Number of ports:                  6
+   Number of port bits:            384
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
+     $add                            2
+     $assert                         1
+     $eq                             1
+     $not                            1
+     $sub                            1
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module simple.
+Creating SMT-LIBv2 representation of module simple_formal.
+
+End of script. Logfile hash: da3145a2f1, CPU: user 0.02s system 0.01s, MEM: 28.64 MB peak
+Yosys 0.55 (git sha1 60f126cd00c94892782470192d6c9f7abebe7c05, g++ 14.3.0 -fPIC -O3)
+Time spent: 71% 2x write_smt2 (0 sec), 13% 2x read_rtlil (0 sec), ...
