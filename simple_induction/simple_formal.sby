@@ -1,8 +1,10 @@
 [tasks]
-bmc
+prove
+cover
 
 [options]
-bmc: mode bmc
+prove: mode prove
+cover: mode cover
 depth 10
 
 [engines]

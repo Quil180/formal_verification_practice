@@ -27,9 +27,7 @@ in
 			gtkwave
     ];
     shellHook = ''
-			# python3 -m venv .cocotbvenv
-			# source .cocotbvenv/bin/activate
-			# pip3 install cocotb cocotb-bus pytest
-			# cocotb-config --version
+    alias formal="sudo sby -f testbench.sby"
+    alias wave="gtkwave testbench_prove/engine_0/trace.vcd"
     '';
   }

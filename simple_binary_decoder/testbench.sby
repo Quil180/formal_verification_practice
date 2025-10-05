@@ -1,0 +1,17 @@
+[tasks]
+prove
+
+[options]
+prove: mode prove
+depth 10
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv testbench.v
+prep -top testbench
+
+[files]
+testbench.v
+binary_decoder.v

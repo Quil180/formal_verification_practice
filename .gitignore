@@ -1,2 +1,5 @@
 simple_formal_*
 simple_formal/
+
+testbench/
+testbench_prove/

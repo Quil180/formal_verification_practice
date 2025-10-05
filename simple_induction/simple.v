@@ -6,14 +6,19 @@
 
 module simple (
     input logic clk,
+    input logic we,  // write enable
+    input logic [63:0] in,
     output logic [63:0] y
 );
 
   logic [63:0] r;
+  initial r <= 0;
 
   assign y = r;
   always @(posedge clk) begin
-    r <= r + 1;
+    if (we) begin
+      r <= in;
+    end
   end
 
 endmodule
